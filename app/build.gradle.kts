@@ -1,4 +1,3 @@
-val lint_version = "31.2.1"
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.ktlint)
@@ -8,9 +7,10 @@ plugins {
 android {
     namespace = "com.example.mydiary"
     compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
+        version =
+            release(36) {
+                minorApiLevel = 1
+            }
     }
 
     defaultConfig {
@@ -28,7 +28,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -47,6 +47,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
-    compileOnly("com.android.tools.lint:lint-api:${lint_version}")
-    compileOnly("com.android.tools.lint:lint-checks:${lint_version}")
+    compileOnly(libs.android.lint.api)
+    compileOnly(libs.android.lint.checks)
 }

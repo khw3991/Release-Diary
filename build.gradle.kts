@@ -4,4 +4,5 @@ plugins {
 
     alias(libs.plugins.ktlint) apply false
     alias(libs.plugins.detekt) apply false
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
 }

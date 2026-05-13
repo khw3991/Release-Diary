@@ -24,3 +24,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "My Diary"
 include(":app")
+include(":lint-checks")
