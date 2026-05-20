@@ -12,6 +12,7 @@ ktlint = "12.1.0"
 detekt = "1.23.7"
 androidLint = "31.2.1"
 jetbrainsKotlinJvm = "2.2.10"
+kotlin = "2.3.21"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,7 +27,9 @@ android-lint-api = { group = "com.android.tools.lint", name = "lint-api", versio
 android-lint-checks = { group = "com.android.tools.lint", name = "lint-checks", version.ref = "androidLint" }
 
 [plugins]
+org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
