@@ -39,6 +39,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
     }
 }
 
@@ -53,6 +54,9 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     compileOnly(libs.android.lint.api)
     compileOnly(libs.android.lint.checks)
+    implementation("androidx.navigation:navigation-compose:2.8.5")
+    implementation("androidx.compose.material:material-icons-extended")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 
     val composeBom = platform("androidx.compose:compose-bom:2026.05.00")
     implementation(composeBom)
